@@ -5,4 +5,3 @@ Trilogic
 32130041 - Stefanus Hiandika
 
 UAS Pemrograman Web Universitas Bunda Mulia 2014
-Contoh
