@@ -1,7 +1,8 @@
 <?php 
-	require_once('../includes/koneksi.php');
-	include('../includes/header.php');
-	include('../includes/admin-menu.php');
+	require_once('../includes/header.php');
+	require_once('../includes/admin-menu.php');
+	require_once('../includes/session.php');
+	check_login();
 ?>
 <!DOCTYPE html>
 <html>

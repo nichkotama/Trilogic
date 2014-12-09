@@ -1,6 +1,6 @@
 <?php 
 	require_once('../includes/koneksi.php');
-	include('../includes/header.php'); 
+	require_once('../includes/header.php'); 
 	session_start();
 
 	$user = $_POST['user'];
@@ -38,7 +38,7 @@
     <table width="300" cellspacing="0" id="login-table">
 		<tr>
 			<td><input type="text" name="user" placeholder="Username" class="input-text" id="user-field" 
-			value="<?php echo $_POST['user'] ?>"required/></td>
+			value="<?php echo $_POST['user'] ?>" required autocomplete="off"/></td>
 		</tr>
 		<tr>
 			<td><input type="password" name="pass" placeholder="Password" class="input-text" id="pass-field" required/></td>

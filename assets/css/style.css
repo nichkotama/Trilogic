@@ -3,7 +3,15 @@
 	width:100%;
 }
 
+.header img{
+	min-height:50px;
+	max-width:200px;
+	max-height:99px;
+	margin-bottom:5px;
+}
+
 .header hr{
+	clear:both;
 	border-bottom: 1px solid rgba(81, 203, 238, 1);
 }
 
@@ -32,8 +40,17 @@
 	height:40px;
 }
 
+#blue-btn-mini{
+	background-color:#0060ff;
+	border:none;
+	margin:3px 3px 3px 0px;
+	color:white;
+	width:15%;
+	height:40px;
+}
+
 #warning-box{
-	width:100%;
+	width:99%;
 	padding:10px;
 	text-align:center;
 	color:#ff0000;
@@ -58,28 +75,37 @@
 	border:none;
 }
 
-.menu{
+.menu,.admin-menu{
 	width:100%;
 	position:relative;
 	left:-40px;
 	top:-10px;
 }
-.menu ul{
+.menu ul, .admin-menu ul{
 	list-style:none;
 }
-.menu ul li{
+.menu ul li, .admin-menu ul li{
 	text-align:center;
 	border-right:1px solid #ccc;
     width:150px;
 	display:inline-block;
 	padding:10px;
 }
-.menu ul li a{
+.menu ul li a, .admin-menu ul li a{
 	text-decoration:none;
 	color:#001eff;
 }
-.menu ul li a:hover{
+.menu ul li a:hover, .admin-menu ul li a:hover{
 	border-bottom:3px solid #ccc;
+}
+.admin-menu ul li{
+	background:url('../images/edit.png') no-repeat;
+    background-position:10px 10px;
+	padding-left:10px;
+    width:110px;
+}
+#logout{
+	background:none;
 }
 
 .apart{
@@ -100,4 +126,10 @@
 
 #form-table{
 	margin-left:30px;
+	width:90%;
+}
+
+#exist-img{
+	max-width:400px;
+	border:1px solid #ccc;
 }
