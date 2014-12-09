@@ -16,8 +16,15 @@
 }
 
 #login-field{
+	clear:both;
 	border: 1px dotted #0060ff;
 	font-family:"Century Gothic";
+}
+
+#edit-field{
+	clear:both;
+	border: 1px dotted #0060ff;
+	font-family:Verdana;
 }
 
 #login-table{
@@ -38,6 +45,24 @@
 	color:white;
 	width:98%;
 	height:40px;
+}
+
+.edit-btn, .delete-btn{
+	display:block;
+	border:none;
+	padding:5px;
+	margin-bottom:3px;
+	text-align:center;
+	text-decoration:none;
+	background-color:#ca00be;
+	color:white;
+}
+.delete-btn{
+	background-color:#e30000;
+}
+
+.edit-btn a:hover, .delete-btn a:hover{
+	background-color:#d00040;
 }
 
 #blue-btn-mini{
@@ -96,6 +121,7 @@
 	color:#001eff;
 }
 .menu ul li a:hover, .admin-menu ul li a:hover{
+	padding-bottom:3px;
 	border-bottom:3px solid #ccc;
 }
 .admin-menu ul li{
@@ -127,6 +153,23 @@
 #form-table{
 	margin-left:30px;
 	width:90%;
+}
+#form-table textarea{
+	width:80%;
+	min-height:250px;
+}
+
+#view-table{
+	width:90%;
+}
+#view-table td{
+	padding:5px;
+}
+#view-table th{
+	background-color:#0060ff; 
+	color:white;
+	text-align:center;
+	padding:5px;
 }
 
 #exist-img{

@@ -1,4 +1,4 @@
-<?php 
+<?php  #alias manage logo 
 	require_once('../includes/header.php');
 	require_once('../includes/admin-menu.php');
 	require_once('../includes/session.php');
@@ -45,7 +45,7 @@
 <title>Manage Logo - Trilogic</title>
 </head>
 <body>
-	<form action="manage-logo.php" method="post" enctype="multipart/form-data"/>
+	<form action="index.php" method="post" enctype="multipart/form-data"/>
 		<input type="hidden" name="id" value="1"/>
 		<table width="100%" id="form-table">
 			<tr>

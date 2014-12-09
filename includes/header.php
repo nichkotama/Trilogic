@@ -1,5 +1,5 @@
 <?php 
-	require_once('../includes/koneksi.php');
+	require_once('koneksi.php');
 
 	$sql = "SELECT ekstensi_file, alignment FROM ms_logo";
 	$hasil = mysqli_query($koneksi, $sql);
