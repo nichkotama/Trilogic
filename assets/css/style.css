@@ -158,6 +158,9 @@
 	width:80%;
 	min-height:250px;
 }
+#form-table #smaller-textarea{
+	min-height:100px;
+}
 
 #view-table{
 	width:90%;

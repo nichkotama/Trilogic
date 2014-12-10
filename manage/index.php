@@ -1,9 +1,9 @@
 <?php 
 	include('../includes/header.php'); 
 	session_start();
-	// if (isset($_SESSION['login']) && $_SESSION['login'] = 1){
-		// header('Location:admin.php');
-	// }
+	if (isset($_SESSION['login']) && $_SESSION['login'] = 1){
+		header('Location:admin.php');
+	}
 	if(isset($_SESSION['pesan']) && $_SESSION['pesan'] != null) 
 	{
 		echo "<div id='warning-box'>Anda harus login terlebih dahulu.</div>";
@@ -12,10 +12,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+function setFocusToTextBox(){
+    document.getElementById("user-field").focus();
+}
+</script>
 <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
 <title>Trilogic CMS</title>
 </head>
-<body oncontextmenu="return false;"> 
+<body oncontextmenu="return false;" onload="setFocusToTextBox()"> 
 <fieldset id="login-field">
 <legend>Login Page</legend>
 <form action="login.php" method="post">
@@ -33,7 +38,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td align="center"><a href="forget-pass.php">Lupa password</a></td>
+			<td align="center"><a href="forget-pass.php">Forgot password</a></td>
 		</tr>
     </table>
 </form>

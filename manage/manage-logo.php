@@ -45,7 +45,7 @@
 <title>Manage Logo - Trilogic</title>
 </head>
 <body>
-	<form action="index.php" method="post" enctype="multipart/form-data"/>
+	<form action="manage-logo.php" method="post" enctype="multipart/form-data"/>
 		<input type="hidden" name="id" value="1"/>
 		<table width="100%" id="form-table">
 			<tr>

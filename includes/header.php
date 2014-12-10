@@ -10,6 +10,7 @@
 ?>
 
 <div class="header">
+	<a href="index.php">
 	<img src="../assets/images/logo.<?php echo $ekstensi?>"
 		<?php if($posisi == 'center'){
 				echo "style='display: block;margin-left: auto;margin-right: auto'";
@@ -18,5 +19,6 @@
 			}
 		?>
 	/>
+	</a>
 	<hr/>
 </div>

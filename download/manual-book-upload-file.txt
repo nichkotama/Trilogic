@@ -1,0 +1,4 @@
+1. Masuk sebagai admin
+2. Klik menu file
+3. Isi kolom di bagian bawah
+4. Klik upload

@@ -32,7 +32,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
-<title>Trilogic CMS</title>
+<title>Edit Service - Trilogic</title>
 </head>
 <body>
 <fieldset id="edit-field">

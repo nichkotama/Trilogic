@@ -28,17 +28,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+function setFocusToTextBox(){
+    document.getElementById("pass-field").focus();
+}
+</script>
 <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
 <title>Trilogic CMS</title>
 </head>
-<body>
+<body oncontextmenu="return false;" onload="setFocusToTextBox()">
 <fieldset id="login-field">
 <legend>Login Page</legend>
 <form action="login.php" method="post">
     <table width="300" cellspacing="0" id="login-table">
 		<tr>
 			<td><input type="text" name="user" placeholder="Username" class="input-text" id="user-field" 
-			value="<?php echo $_POST['user'] ?>" required autocomplete="off"/></td>
+			value="<?php echo $_POST['user'] ?>" required autocomplete="off" onClick="this.select();"/></td>
 		</tr>
 		<tr>
 			<td><input type="password" name="pass" placeholder="Password" class="input-text" id="pass-field" required/></td>
@@ -50,7 +55,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td align="center"><a href="forget-pass.php">Lupa password?</a></td>
+			<td align="center"><a href="forget-pass.php">Forgot password</a></td>
 		</tr>
     </table>
 </form>

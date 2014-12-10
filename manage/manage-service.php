@@ -25,23 +25,15 @@
 <title>Manage Services - Trilogic</title>
 </head>
 <body>
+	<table border=1 id='view-table' cellspacing=0>
+		<tr>
+			<th>No</th>
+			<th width=30%>Nama</th>
+			<th width=55%>Detail</th>
+			<th width=10%>Action</th>
+		</tr>
 	<?php
 		$idx = 1;
-		echo "<table border=1 id='view-table' cellspacing=0>";
-		echo "<tr>";
-			echo "<th>";
-				echo "No";
-			echo "</th>";
-			echo "<th width=30%>";
-				echo "Nama";
-			echo "</th>";
-			echo "<th width=55%>";
-				echo "Detail";
-			echo "</th>";
-			echo "<th width=10%>";
-				echo "Action";
-			echo "</th>";
-		echo "</tr>";
 		while($baris = mysqli_fetch_assoc($hasil)){
 			echo "<tr>";
 				echo "<td align=center valign='top'>";
@@ -61,9 +53,8 @@
 			echo "</tr>";
 			$idx++;
 		}
-		echo "</table>";
 	?>
-	
+	</table>
 	<fieldset style="width:88%">
 	<legend>Add</legend>
 		<form action="manage-service.php" method="post"/>
@@ -74,7 +65,7 @@
 			</tr>
 			<tr>
 				<td valign="top">Detail</td>
-				<td><textarea name="add-detail" placeholder="Masukkan nama layanan"/></textarea></td>
+				<td><textarea name="add-detail" placeholder="Masukkan detail layanan"/></textarea></td>
 			</tr>
 			<tr>
 				<td></td>
