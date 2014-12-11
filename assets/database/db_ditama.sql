@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Inang: 127.0.0.1
--- Waktu pembuatan: 11 Des 2014 pada 05.52
+-- Waktu pembuatan: 11 Des 2014 pada 12.10
 -- Versi Server: 5.5.32
 -- Versi PHP: 5.4.16
 
@@ -47,14 +47,21 @@ CREATE TABLE IF NOT EXISTS `daftar_aplikan` (
 --
 
 CREATE TABLE IF NOT EXISTS `list_job` (
-  `kode_job` varchar(10) NOT NULL,
+  `id` varchar(10) NOT NULL,
   `tgl_update` datetime NOT NULL,
   `nama_job` varchar(50) NOT NULL,
   `requirements` text NOT NULL,
   `terpenuhi` tinyint(1) NOT NULL,
-  PRIMARY KEY (`kode_job`),
-  UNIQUE KEY `kode_job` (`kode_job`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `kode_job` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `list_job`
+--
+
+INSERT INTO `list_job` (`id`, `tgl_update`, `nama_job`, `requirements`, `terpenuhi`) VALUES
+('TS-XII14', '2014-12-11 00:00:00', 'Technical Support', 'Minimal pendidikan SMA/K. Rajin, jujur, usia max 30 tahun.', 0);
 
 -- --------------------------------------------------------
 
@@ -71,14 +78,15 @@ CREATE TABLE IF NOT EXISTS `ms_admin` (
   `kata_hint` varchar(50) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data untuk tabel `ms_admin`
 --
 
 INSERT INTO `ms_admin` (`id`, `username`, `password`, `nama`, `email`, `kata_hint`) VALUES
-(1, 'trilogic', '$2y$10$TrilogicUBMSaltFormatecomQgGT5VopbdCvdiUGtxRKsvfr32Cu', 'Administrator', 'nichkotama@gmail.com', 'Gita');
+(1, 'trilogic', '$2y$10$TrilogicUBMSaltFormatecomQgGT5VopbdCvdiUGtxRKsvfr32Cu', 'Administrator', 'nichkotama@gmail.com', 'Gita'),
+(3, 'nichkotama', '$2y$10$TrilogicUBMSaltFormate019efXO/NVDk2kT6XS/rZJk6FsRPEX2', 'Nicholas Kotama', 'nichkotama@gmail.com', 'Gita');
 
 -- --------------------------------------------------------
 
@@ -92,7 +100,14 @@ CREATE TABLE IF NOT EXISTS `ms_berita` (
   `isi` text NOT NULL,
   `tgl_berita` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data untuk tabel `ms_berita`
+--
+
+INSERT INTO `ms_berita` (`id`, `judul_berita`, `isi`, `tgl_berita`) VALUES
+(1, 'Discount December', 'Dapatkan diskon 10% untuk tiap layanan yang kami sediakan selama bulan Desember!', '2014-12-11 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -151,7 +166,7 @@ CREATE TABLE IF NOT EXISTS `ms_jasa` (
   `nama` varchar(50) NOT NULL,
   `detail` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data untuk tabel `ms_jasa`
@@ -161,20 +176,6 @@ INSERT INTO `ms_jasa` (`id`, `nama`, `detail`) VALUES
 (1, 'Ditama Web Design', 'Kami menyediakan layanan desain web dengan teknologi terbaru dan mutakhir dengan harga bersahabat. Segeralah hubungi kami untuk mendapatkan penawaran khusus, dapat melalui email, telepon, ataupun kunjungi kami di :'),
 (2, 'Ditama Payroll System', 'Anda kesulitan mengelola upah untuk human resources anda? Hubungi kami, kami punya solusinya'),
 (3, 'Ditama Design Consultant', 'Apakah anda tahu graphic standard manual? Apakah usaha atau organisasi anda sudah memilikinya? Kalau belum, hubungi kami, dan dapatkan edit value lebih dari standar yang anda terapkan. Kami juga melayani konsultasi desain segala level.');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `ms_kategori`
---
-
-CREATE TABLE IF NOT EXISTS `ms_kategori` (
-  `id` int(3) NOT NULL AUTO_INCREMENT,
-  `nama` varchar(50) NOT NULL,
-  `kode` varchar(5) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `kode` (`kode`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -209,7 +210,14 @@ CREATE TABLE IF NOT EXISTS `ms_portofolio` (
   `id_jasa` int(3) NOT NULL,
   `deskripsi_porto` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data untuk tabel `ms_portofolio`
+--
+
+INSERT INTO `ms_portofolio` (`id`, `nama_klien`, `tgl_update`, `id_jasa`, `deskripsi_porto`) VALUES
+(1, 'PT MNC Media', '2014-11-12 00:00:00', 1, 'Layanan desain UI web MNC');
 
 -- --------------------------------------------------------
 
