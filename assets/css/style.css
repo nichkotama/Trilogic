@@ -77,6 +77,7 @@
 }
 
 #warning-box{
+	margin-top:30px;
 	width:99%;
 	padding:10px;
 	text-align:center;
@@ -133,7 +134,7 @@
 	padding-left:10px;
     width:110px;
 }
-.admin-menu hr{
+.admin-menu hr, .menu hr{
 	position:relative;
 	clear:both;
 	left:3%;
@@ -156,7 +157,7 @@
 	margin:10px;
 	width:97%;
 	min-height:100px;
-	background-color:#c0c0c0;
+	border:1px solid #ccc;
 }
 
 #form-table{
@@ -192,4 +193,26 @@
 #kahint{
 	width:250px;
 	border:1px solid red;
+}
+
+.notif-title{
+	margin:10px;
+	font-size:16px;
+	text-transform:uppercase;
+}
+.notif-content{
+	margin:10px;
+	font-size:14px;
+}
+.title-space{
+	color:rgb(255,50,0);
+	margin-bottom:0px;
+}
+
+#captcha{
+	font-size:18px;
+	color:#ff0000;
+	font-weight:bold;
+	border:1px dashed #c6c6c6;
+	text-align:center;
 }

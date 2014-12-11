@@ -7,7 +7,7 @@
 	if(isset($_POST['submit-contact'])){
 		$id = $_POST['id'];
 		$nama = $_POST['nama'];
-		$address = $_POST['address'];
+		$address = htmlentities($_POST['address']);
 		$email = $_POST['email'];
 		$phone1 = $_POST['phone1'];
 		$phone2 = $_POST['phone2'];

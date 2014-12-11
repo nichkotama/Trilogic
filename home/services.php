@@ -10,15 +10,16 @@
 </head>
 <body>
 	<fieldset>
-	<legend>Event and News</legend>
+	<legend>Our Services</legend>
 		<?php
-			$sql = "SELECT * FROM ms_berita";
+			$sql = "SELECT * FROM ms_jasa";
 			$hasil = mysqli_query($koneksi, $sql);
 			while($baris=mysqli_fetch_assoc($hasil)){
 				echo "<div class='notif'>";
-				echo "<div class='notif-title'>".$baris['judul_berita']."</div>";
-				echo "<div class='notif-content'>".substr($baris['isi'],0,255)."<br/>";
-				echo "<a href=news.php?news=".$baris['id'].">Read more >></a>";
+				echo "<div class='notif-title'>".$baris['nama']."</div>";
+				echo "<div class='notif-content'>".substr($baris['detail'],0,200)."...<br/>";
+				$ganti_spasi = str_replace(" ","-",$baris['nama']);
+				echo "<a href=readmore.php?service=".$ganti_spasi.">Read more >></a>";
 				echo "</div>";
 				echo "</div>";
 			}

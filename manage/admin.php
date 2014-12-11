@@ -14,7 +14,17 @@
 	<div class="apart">
 	<fieldset>
 	<legend>Messages</legend>
-		<div class="notif"></div>
+		<?php
+			$sql = "SELECT * FROM ms_tamu";
+			$hasil = mysqli_query($koneksi, $sql);
+			while($baris=mysqli_fetch_assoc($hasil)){
+				echo "<div class='notif'>";
+				echo "<div class='notif-title'>".$baris['nama']." - ".$baris['organisasi']."</div>";
+				echo "<div class='notif-content'>".$baris['email']." : ".$baris['krisar']."<br/>";
+				echo "</div>";
+				echo "</div>";
+			}
+		?>
 	</fieldset>
 	</div>
 	<div class="apart">
