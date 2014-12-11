@@ -116,6 +116,7 @@
 	border-right:1px solid #ccc;
     width:150px;
 	display:inline-block;
+	margin-top:10px;
 	padding:10px;
 }
 .menu ul li a, .admin-menu ul li a{
@@ -129,7 +130,6 @@
 .admin-menu ul li{
 	background:url('../images/edit.png') no-repeat;
     background-position:10px 10px;
-	margin-top:10px;
 	padding-left:10px;
     width:110px;
 }
@@ -187,4 +187,9 @@
 #exist-img{
 	max-width:400px;
 	border:1px solid #ccc;
+}
+
+#kahint{
+	width:250px;
+	border:1px solid red;
 }

@@ -57,7 +57,7 @@
 					echo $baris['email'];
 				echo "</td>";
 				echo "<td>";
-					echo "<a href='edit.php?src=mngadmin&uname=".$baris['username']."' class='edit-btn'>Edit</a>";
+					echo "<a href='edit-admin.php?uname=".$baris['username']."' class='edit-btn'>Edit</a>";
 					echo "<a href='delete.php?src=mngadmin&id=".$baris['id']."' class='delete-btn'>Delete</a>";
 				echo "</td>";
 			echo "</tr>";
@@ -99,8 +99,6 @@
 				<td valign="top">Jawaban hint</td>
 				<td><input type="text" name="katahint" value="" placeholder="Masukkan kata pemulihan anda" style="width:250px;"></td>
 			</tr>
-			<div id="keterangan"></div>
-			
 			<tr>
 				<td></td>
 				<td>

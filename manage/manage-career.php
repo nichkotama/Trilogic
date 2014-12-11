@@ -12,7 +12,7 @@
 		$desc = $_POST['add-detail'];
 		$spin = $_POST['add-spin-tepenuhi'];
 		
-		$sql="INSERT INTO list_job (kode_job, tgl_update, nama_job, requirements, terpenuhi) VALUES 
+		$sql="INSERT INTO list_job (id, tgl_update, nama_job, requirements, terpenuhi) VALUES 
 			('$code', '$date', '$title', '$desc', '$spin')";
 		
 		mysqli_query($koneksi, $sql);
@@ -64,8 +64,7 @@
 					echo $baris['terpenuhi'];
 				echo "</td>";
 				echo "<td>";
-					$ganti_spasi = str_replace(" ","-",$baris['id']);
-					echo "<a href='edit-service.php?layanan=".$ganti_spasi."' class='edit-btn'>Edit</a>";
+					echo "<a href='edit-career.php?kode=".$baris['id']."' class='edit-btn'>Edit</a>";
 					echo "<a href='delete.php?src=mngcareer&id=".$baris['id']."' class='delete-btn'>Delete</a>";
 				echo "</td>";
 			echo "</tr>";
@@ -93,8 +92,8 @@
 				<td valign="top">Status</td>
 				<td>
 					<select name="add-spin-terpenuhi">
-						<option value=0>Tampilkan di halaman</option>
-						<option value=1>Sembunyikan dari halaman</option>
+						<option value=1>Tampilkan di halaman</option>
+						<option value=0>Sembunyikan dari halaman</option>
 					</select>
 				</td>
 			</tr>

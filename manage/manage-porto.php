@@ -58,8 +58,7 @@
 					echo $baris['deskripsi_porto'];
 				echo "</td>";
 				echo "<td>";
-					$ganti_spasi = str_replace(" ","-",$baris['nama']);
-					echo "<a href='edit-service.php?layanan=".$ganti_spasi."' class='edit-btn'>Edit</a>";
+					echo "<a href='edit-porto.php?porto=".$baris['id']."' class='edit-btn'>Edit</a>";
 					echo "<a href='delete.php?src=mngporto&id=".$baris['id']."' class='delete-btn'>Delete</a>";
 				echo "</td>";
 			echo "</tr>";

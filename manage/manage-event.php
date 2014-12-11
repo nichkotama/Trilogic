@@ -23,7 +23,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
-<title>Manage Services - Trilogic</title>
+<title>Manage Events - Trilogic</title>
 </head>
 <body>
 	<table border=1 id='view-table' cellspacing=0>
@@ -52,8 +52,7 @@
 					echo $format_tgl;
 				echo "</td>";
 				echo "<td>";
-					$ganti_spasi = str_replace(" ","-",$baris['judul_berita']);
-					echo "<a href='edit-service.php?layanan=".$ganti_spasi."' class='edit-btn'>Edit</a>";
+					echo "<a href='edit-event.php?event=".$baris['id']."' class='edit-btn'>Edit</a>";
 					echo "<a href='delete.php?src=mngevent&id=".$baris['id']."' class='delete-btn'>Delete</a>";
 				echo "</td>";
 			echo "</tr>";
@@ -62,7 +61,7 @@
 	?>
 	</table>
 	<fieldset style="width:88%" id="edit-field">
-	<legend>Add Service</legend>
+	<legend>Add Event</legend>
 		<form action="manage-event.php" method="post"/>
 		<table width="100%" id="form-table">
 			<tr>
