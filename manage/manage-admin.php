@@ -4,16 +4,19 @@
 	require_once('../includes/session.php');
 	check_login();
 	
-	if(isset($_POST['add-service'])){
-		$title = $_POST['add-nama'];
-		$desc = $_POST['add-detail'];
+	if(isset($_POST['add-admin'])){
+		$uname = $_POST['add-user'];
+		$pwd = $_POST['add-pass'];
+		$name = $_POST['real-name'];
+		$email = $_POST['email'];
+		$katahint = $_POST['katahint'];
 		
-		$sql="INSERT INTO ms_jasa (nama, detail) VALUES ('$title', '$desc')";
+		$sql="INSERT INTO ms_admin (username, password, nama, email, kata_hint) VALUES ('$uname', '$pwd', '$name', '$email', '$katahint')";
 		mysqli_query($koneksi, $sql);
 			
-		header('Location:manage-service.php');
+		header('Location:manage-admin.php');
 	}
-	$sql = "SELECT * FROM ms_jasa";
+	$sql = "SELECT * FROM ms_admin";
 	$hasil = mysqli_query($koneksi, $sql);
 	
 ?>
@@ -21,15 +24,15 @@
 <html>
 <head>
 <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
-<title>Manage Services - Trilogic</title>
+<title>Manage Admin - Trilogic</title>
 </head>
 <body>
 	<table border=1 id='view-table' cellspacing=0>
 		<tr>
 			<th>No</th>
-			<th width=30%>Nama</th>
-			<th width=55%>Detail</th>
-			<th width=10%>Action</th>
+			<th width=30%>Username</th>
+			<th width=55%>Nama</th>
+			<th width=10%>Email</th>
 		</tr>
 	<?php
 		$idx = 1;
@@ -39,14 +42,17 @@
 					echo $idx;
 				echo "</td>";
 				echo "<td valign='top'>";
+					echo $baris['username'];
+				echo "</td>";
+				echo "<td valign='top'>";
 					echo $baris['nama'];
 				echo "</td>";
 				echo "<td valign='top'>";
-					echo $baris['detail'];
+					echo $baris['email'];
 				echo "</td>";
 				echo "<td>";
-					$ganti_spasi = str_replace(" ","-",$baris['nama']);
-					echo "<a href='edit-service.php?layanan=".$ganti_spasi."' class='edit-btn'>Edit</a>";
+					$ganti_spasi = str_replace(" ","-",$baris['username']);
+					echo "<a href='edit.php?src=mngadmin&uname=".$ganti_spasi."' class='edit-btn'>Edit</a>";
 					echo "<a href='delete-service.php?layanan=".$baris['id']."' class='delete-btn'>Delete</a>";
 				echo "</td>";
 			echo "</tr>";

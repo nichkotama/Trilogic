@@ -45,11 +45,13 @@
 <title>Manage Logo - Trilogic</title>
 </head>
 <body>
-	<form action="manage-logo.php" method="post" enctype="multipart/form-data"/>
+	<fieldset id="edit-field">
+	<legend>Manage Logo</legend>
+	<form action="manage-logo.php" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="id" value="1"/>
 		<table width="100%" id="form-table">
 			<tr>
-				<td valign="top">Exist Image</td>
+				<td valign="top">Current image</td>
 				<td><img src="../assets/images/logo.<?php echo $baris['ekstensi_file']?>" id="exist-img"></td>
 			</tr>
 			<tr>
@@ -74,6 +76,7 @@
 				</td>
 			</tr>
 		</table>
-	<form>
+	</form>
+	</fieldset>
 </body>
 </html>

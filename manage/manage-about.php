@@ -5,6 +5,7 @@
 	check_login();
 	
 	if(isset($_POST['add-service'])){
+		$id = $_POST['id'];
 		$title = $_POST['add-nama'];
 		$desc = $_POST['add-detail'];
 		
@@ -54,12 +55,12 @@
 		}
 	?>
 	</table>
-	<fieldset style="width:88%" id="edit-field">
-	<legend>Add Service</legend>
+	<fieldset style="width:88%">
+	<legend>Add</legend>
 		<form action="manage-service.php" method="post"/>
 		<table width="100%" id="form-table">
 			<tr>
-				<td valign="top" width=15%>Service Name</td>
+				<td valign="top" width=15%>Nama Layanan</td>
 				<td><input type="text" name="add-nama" value="" placeholder="Masukkan nama layanan"></td>
 			</tr>
 			<tr>
@@ -70,7 +71,6 @@
 				<td></td>
 				<td>
 					<input type="submit" name="add-service" value="Add" id="blue-btn-mini"/>
-					<input type="reset" value="Reset" id="blue-btn-mini"/>
 				</td>
 			</tr>
 		</table>

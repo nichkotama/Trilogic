@@ -17,14 +17,16 @@
 
 #login-field{
 	clear:both;
+	margin-top:20px;
 	border: 1px dotted #0060ff;
 	font-family:"Century Gothic";
 }
 
 #edit-field{
 	clear:both;
+	margin-top:10px;
 	border: 1px dotted #0060ff;
-	font-family:Verdana;
+	font-family:palatino;
 }
 
 #login-table{
@@ -127,8 +129,15 @@
 .admin-menu ul li{
 	background:url('../images/edit.png') no-repeat;
     background-position:10px 10px;
+	margin-top:10px;
 	padding-left:10px;
     width:110px;
+}
+.admin-menu hr{
+	position:relative;
+	clear:both;
+	left:3%;
+	margin-top:-10;
 }
 #logout{
 	background:none;

@@ -80,7 +80,7 @@
 	?>
 	
 	</table>
-	<fieldset style="width:88%">
+	<fieldset style="width:88%" id="edit-field">
 	<legend>Upload New File</legend>
 		<form action="manage-file.php" method="post" enctype="multipart/form-data"/>
 		<input type="hidden" name="id" value="1"/>

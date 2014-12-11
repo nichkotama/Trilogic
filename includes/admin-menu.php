@@ -10,4 +10,5 @@
 		<li><a href="manage-user.php">Admin</a></li>
 		<li id="logout"><a href="logout.php"><img src="../assets/images/logout.png"> Logout</a></li>
 	</ul>
+	<hr/>
 </div>
