@@ -56,21 +56,21 @@
 	</div>
 	
 	<div class="apart">
-		<fieldset>
+		<fieldset id="full">
 		<legend>Contact Form</legend>
 		<form action="contact.php" method="post">
 		<table width="100%" id="form-table">
 			<tr>
 				<td width="20%">Full Name</td>
-				<td><input type="text" name="nama" value="" placeholder="Masukkan kritik atau saran anda" required></td>
+				<td><input type="text" name="nama" value="" placeholder="Masukkan nama anda" required></td>
 			</tr>
 			<tr>
 				<td>Email</td>
-				<td><input type="email" name="email" value="" placeholder="Masukkan kritik atau saran anda" required></td>
+				<td><input type="email" name="email" value="" placeholder="Masukkan email anda" required></td>
 			</tr>
 			<tr>
 				<td>Organisasi</td>
-				<td><input type="text" name="org" value="" placeholder="Masukkan kritik atau saran anda"></td>
+				<td><input type="text" name="org" value="" placeholder="Masukkan organisasi asal anda"></td>
 			</tr>
 			<tr>
 				<td valign="top">Suggestion</td>
@@ -91,5 +91,5 @@
 	</form>
 		</fieldset>
 	</div>
-</body>
+<?php include('../includes/footer.php') ?></body>
 </html>

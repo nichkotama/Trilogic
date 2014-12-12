@@ -30,8 +30,18 @@
 	<div class="apart">
 	<fieldset>
 	<legend>List of Applicants</legend>
-		<div class="notif"></div>
+		<?php
+			$sql = "SELECT * FROM daftar_aplikan";
+			$hasil = mysqli_query($koneksi, $sql);
+			while($baris=mysqli_fetch_assoc($hasil)){
+				echo "<div class='notif'>";
+				echo "<div class='notif-title'>".$baris['nama']." - ".$baris['bdg_pekerjaan']."</div>";
+				echo "<div class='notif-content'>".$baris['email']." : <a href='../file_cv/".$baris['file_cv']."' target='_blank'>Click to read CV</a><br/>";
+				echo "</div>";
+				echo "</div>";
+			}
+		?>
 	</fieldset>
 	</div>
-</body>
+<?php include('../includes/footer.php') ?></body>
 </html>

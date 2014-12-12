@@ -6,21 +6,23 @@
 <html>
 <head>
 <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
-<title>Trilogic CMS</title>
+<title>Career - Trilogic CMS</title>
 </head>
 <body>
 	<fieldset>
-	<legend>Event and News</legend>
+	<legend>We need resource as</legend>
 		<?php
-			$sql = "SELECT * FROM ms_berita";
+			$sql = "SELECT * FROM list_job";
 			$hasil = mysqli_query($koneksi, $sql);
 			while($baris=mysqli_fetch_assoc($hasil)){
-				echo "<div class='notif'>";
-				echo "<div class='notif-title'>".$baris['judul_berita']."</div>";
-				echo "<div class='notif-content'>".substr($baris['isi'],0,255)."<br/>";
-				echo "<a href=news.php?news=".$baris['id'].">Read more >></a>";
-				echo "</div>";
-				echo "</div>";
+		?>
+				<div class='notif-service'>
+				<div class='notif-title'><?php echo $baris['nama_job']?></div>
+				<div class='notif-content'><?php echo $baris['requirements']?>"<br/>
+				<a href="apply.php?field=<?php echo $baris['id']?>">[Apply]</a>
+				</div>
+				</div>
+		<?php
 			}
 		?>
 	</fieldset>

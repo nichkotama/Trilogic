@@ -6,7 +6,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
-<title>Trilogic CMS</title>
+<title>News - Trilogic CMS</title>
 </head>
 <body>
 	<fieldset>
@@ -20,8 +20,8 @@
 		<div class='notif'>
 			<div class='notif-title'><?php echo $baris['judul_berita']?></div>
 			<div class='notif-content'><?php echo $baris['isi']?><br/>
-			<a href="index.php">Back</a></div>
+			<a href="index.php"><< Back</a></div>
 		</div>
 	</fieldset>
-</body>
+<?php include('../includes/footer.php') ?></body>
 </html>

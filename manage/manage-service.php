@@ -76,5 +76,5 @@
 		</table>
 		<form>
 	</fieldset>
-</body>
+<?php include('../includes/footer.php') ?></body>
 </html>

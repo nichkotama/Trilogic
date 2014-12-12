@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Inang: 127.0.0.1
--- Waktu pembuatan: 12 Des 2014 pada 03.23
+-- Waktu pembuatan: 12 Des 2014 pada 09.35
 -- Versi Server: 5.5.32
 -- Versi PHP: 5.4.16
 
@@ -29,7 +29,7 @@ USE `k6911360_ditama`;
 --
 
 CREATE TABLE IF NOT EXISTS `daftar_aplikan` (
-  `id` varchar(10) NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `nama` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `alamat` varchar(255) NOT NULL,
@@ -38,7 +38,14 @@ CREATE TABLE IF NOT EXISTS `daftar_aplikan` (
   `file_cv` varchar(50) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data untuk tabel `daftar_aplikan`
+--
+
+INSERT INTO `daftar_aplikan` (`id`, `nama`, `email`, `alamat`, `bdg_pekerjaan`, `no_hp`, `file_cv`) VALUES
+(1, 'Robertus Sakti', 'illtelluasecret@gmail.com', 'Jl. Kebanjiran Lama no 0', 'TS-XII14', '+6282374451441', 'robertus-sakti.pdf');
 
 -- --------------------------------------------------------
 
@@ -86,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `ms_admin` (
 
 INSERT INTO `ms_admin` (`id`, `username`, `password`, `nama`, `email`, `kata_hint`) VALUES
 (1, 'trilogic', '$2y$10$TrilogicUBMSaltFormatecomQgGT5VopbdCvdiUGtxRKsvfr32Cu', 'Administrator', 'nichkotama@gmail.com', 'Gita'),
-(3, 'nichkotama', '$2y$10$TrilogicUBMSaltFormateZoeNPJ0p19tIFLkWVTSs2VVVLMSKY0e', 'Nicholas Kotama', 'nichkotama@gmail.com', 'Gita');
+(3, 'nichkotama', '$2y$10$TrilogicUBMSaltFormateK2i4cOpNtkCLnQ13wayaQ8aJcB9k6e2', 'Nicholas Kotama', 'nichkotama@gmail.com', 'Gita');
 
 -- --------------------------------------------------------
 
@@ -195,7 +202,7 @@ CREATE TABLE IF NOT EXISTS `ms_logo` (
 --
 
 INSERT INTO `ms_logo` (`ekstensi_file`, `alignment`, `id`) VALUES
-('png', '', 1);
+('png', 'left', 1);
 
 -- --------------------------------------------------------
 
