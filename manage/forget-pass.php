@@ -25,7 +25,6 @@
 			$sql="UPDATE ms_admin SET password='$newpass'
 			WHERE username='$uname'";
 			$hasil = mysqli_query($koneksi, $sql);
-			echo $sql;
 			header('Location:index.php');
 		} 
 		

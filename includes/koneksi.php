@@ -1,8 +1,8 @@
 <?php
 	$host = "localhost";
-	$user = "k6911360_ditama";
-	$pass = "ditama";
-	$name = "k6911360_ditama";
+	$user = "root";
+	$pass = "";
+	$name = "db_ditama";
 
 	$koneksi = mysqli_connect($host, $user, $pass, $name);
 
